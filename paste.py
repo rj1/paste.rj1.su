@@ -8,7 +8,7 @@ from pygments.formatters import HtmlFormatter
 from datetime import datetime
 
 
-app = bottle.Bottle()
+app = application = bottle.Bottle()
 app.install(bottle.ext.sqlite.Plugin(dbfile="paste.db"))
 hashids = Hashids(salt="", min_length="3")
 
